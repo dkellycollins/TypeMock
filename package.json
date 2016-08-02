@@ -34,6 +34,6 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "proxy-polyfill": "^0.1.6"
+    "harmony-reflect": "^1.4.6"
   }
 }

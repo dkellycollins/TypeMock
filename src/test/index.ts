@@ -1,5 +1,4 @@
-require('proxy-polyfill');
-
+import 'harmony-reflect';
 import * as assert from 'better-assert';
 import * as TypeMock from '../index';
 
