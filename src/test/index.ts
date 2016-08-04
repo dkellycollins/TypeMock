@@ -16,16 +16,31 @@ describe('TypeMock.mock', () => {
 
    it('should call stubbed method on instance passed into mock.', () => {
       //Arrange
-      var mock = TypeMock.mock<any>({
+      var instance = {
          returnOne() {
             return 1;
          }
-      });
+      };
+      var mock = TypeMock.mock<any>(instance);
       
       //Act
       var actual = mock.returnOne();
       
       //Assert
       assert(actual == 1);
+   });
+   
+   it('should return default value from provided options', () => {
+      //Arrange
+      var options = {
+         defaultValue: 42
+      };
+      var mock = TypeMock.mock<any>({}, options);
+      
+      //Act
+      var actual = mock.fourtyTwo;
+      
+      //Assert
+      assert(actual == 42)
    });
 });
