@@ -26,10 +26,3 @@ gulp.task('compile:ts', function(){
        }))
        .pipe(gulp.dest('dist'));
 });
-
-//Test
-
-gulp.task('test', ['compile'], function() {
-   return gulp.src('dist/test/**/*.js')
-       .pipe(mocha({reporter: 'nyan'}));
-});
