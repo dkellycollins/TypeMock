@@ -1,6 +1,6 @@
 {
-  "name": "type_mock",
-  "version": "1.0.0",
+  "name": "type-mock",
+  "version": "0.0.1",
   "description": "A mocking library for tyepscript",
   "main": "index.js",
   "scripts": {
