@@ -1,14 +1,14 @@
-# TypeMock
+# Mockfill
 
-TypeMock aims to make mocking objects in typescript an easier experience.
+Mockfill aims to make mocking objects in typescript an easier experience.
 When mocking interfaces in typescript tests, every method must be defined in order 
-to be compiled. Even if fix the compiler errors, you still need to mock every
+to be compiled. Even if you can fix the compiler errors, you still need to mock every
 method your class under test might use. 
 
 Ideally, we want our tests to only mock methods that play a part in what we are testing.
-TypeMock allows us to do this by filling in missing methods with default implementations.
+Mockfill allows us to do this by filling in missing methods with default implementations.
 
-Under the hood, TypeMock uses the Proxy class to intercept all attempts to get properties
+Under the hood, Mockfill uses the Proxy class to intercept all attempts to get properties
 from an object. If the underlying object has the property, the Proxy defers to the underlying object.
 If the object is missing the property, the Proxy supplies a default value.
 
@@ -16,13 +16,13 @@ If the object is missing the property, the Proxy supplies a default value.
 
 Install
 ```shell
-npm install --save-dev type-mock
+npm install --save-dev mockfill
 ```
 
 Usage
 ```Typescript
 import 'harmony-reflect'
-import * as TypeMock from 'type-mock'
+import * as Mockfill from 'mockfill'
 
 interface MyInterface {
    methodOne();
@@ -38,14 +38,14 @@ function test() {
          return 1;
       }
    }
-   const mock = TypeMock.mock<MyInterface>(myInstance);
+   const mock = Mockfill.mock<MyInterface>(myInstance);
    
    mock.methodOne(); //returns 1 as expected.
    mock.methodTwo(); //returns nothing, but does not throw an error!
 }
 ```
 
-Because TypeMock depends on the Proxy object you must do two things when using it.
+Because Mockfill uses the Proxy object you must do two things when using it.
 1. require 'harmony-reflect' once somewhere in your project.
 2. run node with the --harmony-proxies option.
 
@@ -54,9 +54,11 @@ Because TypeMock depends on the Proxy object you must do two things when using i
 This project requires the typings tool to manage external typescript definition files.
 
 ```shell
-git clone https://github.com/dkellycollins/TypeMock.git
-cd TypeMock/
+git clone https://github.com/dkellycollins/mockfill.git
+cd mockfill/
 npm install
+cd src/
+typings install
 ```
 
 Installs project dependencies and typescript definition files.

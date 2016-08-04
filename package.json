@@ -1,16 +1,15 @@
 {
-  "name": "type-mock",
+  "name": "mockfill",
   "version": "0.0.1",
   "description": "A mocking library for tyepscript",
   "main": "index.js",
   "scripts": {
-    "postinstall": "typings install",
     "compile": "gulp compile",
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkellycollins/TypeMock.git"
+    "url": "git+https://github.com/dkellycollins/Mockfill.git"
   },
   "keywords": [
     "typescript",
@@ -20,9 +19,9 @@
   "author": "Devin Kelly-Collins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dkellycollins/TypeMock/issues"
+    "url": "https://github.com/dkellycollins/mockfill/issues"
   },
-  "homepage": "https://github.com/dkellycollins/TypeMock#readme",
+  "homepage": "https://github.com/dkellycollins/mockfill#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "better-assert": "^1.0.2",

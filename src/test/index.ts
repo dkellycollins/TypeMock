@@ -1,12 +1,12 @@
 import 'harmony-reflect';
 import * as assert from 'better-assert';
-import * as TypeMock from '../index';
+import * as Mockfill from '../index';
 
-describe('TypeMock', () => {
+describe('Mockfill', () => {
    describe('mock', () => {
       it('should call a missing method without error', () => {
          //Arrange
-         var mock = TypeMock.mock<any>();
+         var mock = Mockfill.mock<any>();
 
          //Act
          mock.missingMethod();
@@ -22,7 +22,7 @@ describe('TypeMock', () => {
                return 1;
             }
          };
-         var mock = TypeMock.mock<any>(instance);
+         var mock = Mockfill.mock<any>(instance);
 
          //Act
          var actual = mock.returnOne();
@@ -36,7 +36,7 @@ describe('TypeMock', () => {
          var options = {
             defaultValue: 42
          };
-         var mock = TypeMock.mock<any>({}, options);
+         var mock = Mockfill.mock<any>({}, options);
 
          //Act
          var actual = mock.fourtyTwo;
