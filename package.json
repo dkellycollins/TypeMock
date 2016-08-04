@@ -4,6 +4,7 @@
   "description": "A mocking library for tyepscript",
   "main": "index.js",
   "scripts": {
+    "postinstall": "typings install",
     "compile": "gulp compile",
     "test": "gulp test"
   },
