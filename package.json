@@ -31,9 +31,10 @@
     "gulp-mocha": "^2.2.0",
     "gulp-typescript": "^2.13.6",
     "mocha": "^3.0.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "harmony-reflect": "^1.4.6"
   },
-  "dependencies": {
+  "peerDependencies": {
     "harmony-reflect": "^1.4.6"
   }
 }
