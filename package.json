@@ -4,8 +4,9 @@
   "description": "A mocking library for tyepscript",
   "main": "index.js",
   "scripts": {
-    "compile": "gulp compile",
-    "test": "gulp test"
+    "postinstall": "cd src && typings install",
+    "build": "gulp compile",
+    "test": "mocha dist/test/**/*.js --harmony-proxies"
   },
   "repository": {
     "type": "git",

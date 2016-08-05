@@ -1,7 +1,8 @@
 language: node_js
 node_js: node
 install:
+  - npm install -g typings mocha
   - npm install
 script:
-  - npm run compile
-  - npm run test
+  - npm run build
+  - npm test
